@@ -47,10 +47,7 @@ INSERT INTO `carga_horaria` (`cod_proj`, `mat`, `c_horaria`) VALUES
 (4, 149, 985),
 (6, 254, 259),
 (2, 165, 354),
-(2, 101, 30),
-(14, 959, 125),
-(15, 959, 125),
-(19, 961, 125);
+(2, 101, 30);
 
 -- --------------------------------------------------------
 
@@ -70,12 +67,12 @@ CREATE TABLE `depto` (
 
 INSERT INTO `depto` (`cod_depto`, `nome`, `endereco`) VALUES
 (123, 'Planejamento', 'RUA A, 25'),
-(125, 'Segurança', 'RUA C, 125'),
 (221, 'Administrativo', 'RUA B, 36'),
-(232, 'Suprimentos', 'RUA G, 127'),
+(125, 'Segurança', 'RUA C, 125'),
 (257, 'Recursos Humanos', 'RUA D, 225'),
+(859, 'OnBoarding', 'RUA E, 285'),
 (854, 'Tecnologia', 'RUA F, 27'),
-(859, 'OnBoarding', 'RUA E, 285');
+(232, 'Suprimentos', 'RUA G, 127');
 
 -- --------------------------------------------------------
 
@@ -99,20 +96,19 @@ CREATE TABLE `empregado` (
 INSERT INTO `empregado` (`mat`, `nome_emp`, `endereco`, `rg`, `cpf`, `cod_depto`) VALUES
 (11, 'JOAO', 'AV. CLIMERIO N. 45', '2781230', '126543987-11', '123'),
 (101, 'JOAQUIM', 'RUA DA PRAIA S/N', '1582650', '168572598-55', '123'),
-(103, 'ERICA', 'RUA FLORIANO, 982', '1236578', '367895128-57', '8593'),
 (111, 'CARLOS', 'AV. PAULISTA 1236', '1215191', '126874598-58 ', '221'),
-(129, 'MARIA', 'RUA PADRE CAFÉ, 125', '1800589', '125987720-18', '221'),
-(149, 'JOSE', 'RUA LOPES, 154', '1245789', '854966521-14', '859'),
-(165, 'PAULA', 'RUA SILVA JARDIM, 2', '1534648', '363524198-55', '232'),
-(167, 'JULIA', 'RUA JK, 1512', '1805874', '369857198-51', '854'),
-(185, 'MARCOS', 'RUA LOPES MENDES 152', '1115489', '364578518-66', '854'),
-(194, 'EDUARDO', 'RUA LOPES MENDES 578', '1789589', '195678968-55', '232'),
 (209, 'ANA', 'RUA LOPES MENDES 12', '1800589', '369857198-55', '221'),
-(254, 'PEDRO', 'RUA BATISTA, 222', '3601551', '124567898-55', '221'),
+(129, 'MARIA', 'RUA PADRE CAFÉ, 125', '1800589', '125987720-18', '221'),
 (259, 'PEDRO', 'RUA BOM JARDIM, 254', '1875921', '361254978-55', '232'),
 (296, 'PAULO', 'RUA RIO BRANCO, 1284', '1459758', '125478998-15', '221'),
+(149, 'JOSE', 'RUA LOPES, 154', '1245789', '854966521-14', '859'),
+(254, 'PEDRO', 'RUA BATISTA, 222', '3601551', '124567898-55', '221'),
+(167, 'JULIA', 'RUA JK, 1512', '1805874', '369857198-51', '854'),
 (952, 'ANDREIA', 'RUA MARECHAL, 112', '1254698', '325145698-55', '859'),
-(961, 'Zilney silva', 'Rua teste 14', 'mg 123456', '987.654.321-00', '854');
+(165, 'PAULA', 'RUA SILVA JARDIM, 2', '1534648', '363524198-55', '232'),
+(103, 'ERICA', 'RUA FLORIANO, 982', '1236578', '367895128-57', '8593'),
+(185, 'MARCOS', 'RUA LOPES MENDES 152', '1115489', '364578518-66', '854'),
+(194, 'EDUARDO', 'RUA LOPES MENDES 578', '1789589', '195678968-55', '232');
 
 -- --------------------------------------------------------
 
@@ -137,8 +133,7 @@ INSERT INTO `empregado_dependente` (`mat_emp`, `dependente`, `nome_dep`, `data_n
 (11, 2, 'Marcos', '01/04/2009', 'Filho(a)'),
 (11, 3, 'Mariana', '08/09/2011', 'Filho(a)'),
 (103, 1, 'Matheus', '09/04/2006', 'Filho(a)'),
-(129, 1, 'João Carlos', '04/05/1978', 'Cônjuge'),
-(952, 1, 'Sabrina', '2007-05-02', 'Filho');
+(129, 1, 'João Carlos', '04/05/1978', 'Cônjuge');
 
 -- --------------------------------------------------------
 
@@ -162,8 +157,7 @@ INSERT INTO `projeto` (`codigo`, `descricao`, `cod_depto`) VALUES
 (16, 'TRANSPORTE', 123),
 (17, 'INFORMÁTICA', 854),
 (18, 'TELEMARKETING', 859),
-(19, 'REDES', 232),
-(22, 'PROJETO TESTE', 0);
+(19, 'REDES', 232);
 
 --
 -- Índices para tabelas despejadas
